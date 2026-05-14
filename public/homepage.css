@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.bg{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./assets/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    z-index: -5;
+}
+
+a{
+   text-decoration: none; 
+   color: white;
+   margin-left: 2rem;
+   margin-right: 4rem;
+}
+
+a:hover{
+    color: red;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    width:100vw;
+    background-color: black;
+    position:sticky;
+    z-index: 0;
+}
+
+
+table {
+    font-family: arial, sans-serif;
+    color: white;
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 10rem;
+}
+td, th {
+
+    border: 1px solid white;
+    text-align: left;
+    padding: 8px;
+}
+th{
+    text-align: center;
+} 
+input{
+    width: 50%;
+    border-radius: 10px;
+    height: 2rem;
+}
+button{
+    height:1.7rem;
+    width:5%;
+}
+
+ 
+#players{
+    background-color: black;
+    position: relative;
+    top: 7rem;
+}
+
+
+#teams{
+    background-color: black;
+    position: relative;
+    top: 13rem;
+}
+
+
+#wk{
+    background-color: black;
+    position: relative;
+    top: 19rem;
+}
+   
+
+#captains{
+    background-color: black;
+    position: relative;
+    top: 25rem;
+}
+
+#umpire{
+    background-color: black;
+    position: relative;
+    top: 32rem;
+}
+
+#coach{
+    background-color: black;
+    position: relative;
+    top: 38rem;
+}
+
+#stadium{
+    background-color: black;
+    position: relative;
+    top: 44rem;
+}
+
+
+.top{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.top form{
+    flex-grow: 5;
+}
+.playersContent,.teamContent,.wkContent,.captainContent,.coachContent,.stadiumContent,.umpireContent{
+    visibility: collapse;
+}
+.visible{
+   visibility: visible;
+}

@@ -1,0 +1,310 @@
+<link rel="stylesheet" href="./homepage.css">
+
+<div class="bg"></div>
+
+<div id="navbar">
+    <a href="#players">Players</a>
+    <a href="#teams">Team</a>
+    <a href="#wk">Wicket Keeper</a>
+    <a href="#captains">Captain</a>
+    <a href="#umpire">Umpire</a>
+    <a href="#coach">Coach</a>
+    <a href="#stadium">Stadium</a>
+</div>
+
+<div id="players">
+    <table>
+        <tr>
+            <th colspan="3">PLAYERS</th>
+            <th colspan="5">SEARCH
+                    <div class="top">
+                        <form action="/player" method="post">
+                            <input type="text" id="playerSearch" name="player" />
+                            <input type="submit"></input>
+                        </form>
+                        <button id="playerButton">▼</button>
+                    </div>
+            </th>
+            <th colspan="7">
+                <p>
+                    1-India <br>
+                    2-Australia <br>
+                    3-England <br>
+                    4-New Zealand <br>
+                    5-South Africa <br>
+                </p>
+            </th>
+        </tr>
+            <tr class="playersContent">
+                <td class="playersContent">Player ID</td>
+                <td class="playersContent">Team ID</td>
+                <td class="playersContent">Player Name</td>
+                <td class="playersContent">number of matches</td>
+                <td class="playersContent">number of runs</td>
+                <td class="playersContent">number of wickets</td>
+                <td class="playersContent">type of bowler</td>
+                <td class="playersContent">economy</td>
+                <td class="playersContent">ODI</td>
+                <td class="playersContent">Test</td>
+                <td class="playersContent">T20</td>
+                <td class="playersContent">50s</td>
+                <td class="playersContent">100s</td>
+                <td class="playersContent">Type of Batsmen</td>
+                <td class="playersContent">Strike Rate</td>
+            </tr>
+            <%  for(let i=0;i<player.length;i++){%>
+            <tr class="playersContent">
+                <td class="playersContent">
+                    <%= player[i].player_id %>
+                </td>
+                <td class="playersContent"><%= player[i].team_id %></td>
+                <td class="playersContent"><%= player[i].player_name %></td>
+                <td class="playersContent"><%= player[i].no_of_matches %></td>
+                <td class="playersContent"><%= player[i].no_of_runs %></td>
+                <td class="playersContent"><%= player[i].no_of_wickets %></td>
+                <td class="playersContent"><%= player[i].type_of_bowler %></td>
+                <td class="playersContent"><%= player[i].economy %></td>
+                <td class="playersContent"><%= player[i].odi %></td>
+                <td class="playersContent"><%= player[i].test %></td>
+                <td class="playersContent"><%= player[i].t20 %></td>
+                <td class="playersContent"><%= player[i].fifty %></td>
+                <td class="playersContent"><%= player[i].hundred %></td>
+                <td class="playersContent"><%= player[i].type_of_batsmen %></td>
+                <td class="playersContent"><%= player[i].strike_rate %></td>
+            </tr>
+    <%}%>
+    </table>
+</div>
+
+<div id="teams">
+    <table>
+        <tr>
+            <th colspan="1">TEAMS</th>
+            <th colspan="3">SEARCH
+                <div class="top">
+                    <form action="/team" method="post">
+                        <input type="text" id="teamSearch" name="team" />
+                        <input type="submit"></input>
+                    </form>
+                    <button id="teamButton">▼</button>
+                </div>
+            </th>
+        </tr>
+        <div class="teamContent">
+            <tr class="teamContent">
+                <td class="teamContent">Team ID</td>
+                <td class="teamContent">Rank</td>
+                <td class="teamContent">Team Name</td>
+                <td class="teamContent">Country Name</td>
+            </tr>
+            <%  for(let i=0;i<team.length;i++){%>
+            <tr class="teamContent">
+                <td class="teamContent"><%= team[i].team_id %></td>
+                <td class="teamContent"><%= team[i].rank %></td>
+                <td class="teamContent"><%= team[i].team_name %></td>
+                <td class="teamContent"><%= team[i].country_name %></td>
+            </tr>
+        </div>
+        <%}%>
+    </table>
+</div>
+
+<div id="wk">
+    <table>
+        <tr>
+            <th colspan="1">WICKET KEEPER</th>
+            <th colspan="3">SEARCH
+                <div class="top">
+                    <form action="/wk" method="post">
+                        <input type="text" id="wkSearch" name="wk" />
+                        <input type="submit"></input>
+                    </form>
+                    <button id="wkButton">▼</button>
+                </div>
+            </th>
+        </tr>
+        <div class="wkContent">
+            <tr class="wkContent">
+                <td class="wkContent">team id</td>
+                <td class="wkContent">Wicket Keeper Name</td>
+                <td class="wkContent">Country Name</td>
+                <td class="wkContent">Catches</td>
+                <td class="wkContent">Stumpings</td>
+            </tr>
+            <%  for(let i=0;i<wk.length;i++){%>
+            <tr class="wkContent">
+                <td class="wkContent"><%= wk[i].team_id %></td>
+                <td class="wkContent"><%= wk[i].wk_name %></td>
+                <td class="wkContent"><%= wk[i].country_name %></td>
+                <td class="wkContent"><%= wk[i].catches %></td>
+                <td class="wkContent"><%= wk[i].wk_stumpings%></td>
+            </tr>
+        </div>
+        <%}%>
+    </table>
+</div>
+<div id="captains">
+    <table>
+        <tr>
+            <th colspan="1">CAPTAINS</th>
+            <th colspan="3">SEARCH
+                <div class="top">
+                    <form action="/captain" method="post">
+                        <input type="text" id="captainSearch" name="captain" />
+                        <input type="submit"></input>
+                    </form>
+                    <button id="captainButton">▼</button>
+                </div>
+            </th>
+        </tr>
+    </table>
+    <table>
+        <div class="captainContent">
+            <tr class="captainContent">
+                <td class="captainContent">Captain ID</td>
+                <td class="captainContent">Captain Name</td>
+                <td class="captainContent">Year Of Captaincy</td>
+                <td class="captainContent">Number Of Wins</td>
+            </tr>
+            <%  for(let i=0;i<captain.length;i++){%>
+            <tr class="captainContent">
+                <td class="captainContent"><%= captain[i].captain_id %></td>
+                <td class="captainContent"><%= captain[i].captain_name %></td>
+                <td class="captainContent"><%= captain[i].years_of_captaincy %></td>
+                <td class="captainContent"><%= captain[i].no_of_wins %></td>
+            </tr>
+        </div>
+        <%}%>
+    </table>
+</div>
+
+<div id="umpire">
+    <table>
+        <tr>
+            <th colspan="1">UMPIRE</th>
+            <th colspan="3">SEARCH
+                <div class="top">
+                    <form action="/umpire" method="post">
+                        <input type="text" id="umpireSearch" name="umpire" />
+                        <input type="submit"></input>
+                    </form>
+                    <button id="umpireButton">▼</button>
+                </div>
+            </th>
+        </tr>
+    </table>
+    <table>
+        <div class="umpireContent">
+            <tr class="umpireContent">
+                <td class="umpireContent">Umpire ID</td>
+                <td class="umpireContent">Umpire Name</td>
+                <td class="umpireContent">Country</td>
+                <td class="umpireContent">Number Of Matches</td>
+            </tr>
+            <%  for(let i=0;i<umpire.length;i++){%>
+            <tr class="umpireContent">
+                <td class="umpireContent"><%= umpire[i].umpire_id %></td>
+                <td class="umpireContent"><%= umpire[i].umpire_name %></td>
+                <td class="umpireContent"><%= umpire[i].country %></td>
+                <td class="umpireContent"><%= umpire[i].no_of_matches %></td>
+            </tr>
+        </div>
+        <%}%>
+    </table>
+</div>
+
+<div id="coach">
+    <table>
+        <tr>
+            <th colspan="1">Coach</th>
+            <th colspan="3">SEARCH
+                <div class="top">
+                    <form action="/coach" method="post">
+                        <input type="text" id="coachSearch" name="coach" />
+                        <input type="submit"></input>
+                    </form>
+                    <button id="coachButton">▼</button>
+                </div>
+            </th>
+        </tr>
+    </table>
+    <table>
+        <div class="coachContent">
+            <tr class="coachContent">
+                <td class="coachContent">Coach Name</td>
+                <td class="coachContent">Type of Coach</td>
+                <td class="coachContent">Country Name</td>
+            </tr>
+            <%  for(let i=0;i<coach.length;i++){%>
+            <tr class="coachContent">
+                <td class="coachContent"><%= coach[i].coach_name %></td>
+                <td class="coachContent"><%= coach[i].type_of_coach %></td>
+                <td class="coachContent"><%= coach[i].country_name %></td>
+            </tr>
+        </div>
+        <%}%>
+    </table>
+</div>
+
+<div id="stadium">
+    <table>
+        <tr>
+            <th colspan="1">Stadium</th>
+            <th colspan="3">SEARCH
+                <div class="top">
+                    <form action="/stadium" method="post">
+                        <input type="text" id="stadiumSearch" name="stadium" />
+                        <input type="submit"></input>
+                    </form>
+                    <button id="stadiumButton">▼</button>
+                </div>
+            </th>
+        </tr>
+    </table>
+    <table>
+        <div class="stadiumContent">
+            <tr class="stadiumContent">
+                <td class="stadiumContent">Stadium Name</td>
+                <td class="stadiumContent">Country Name</td>
+                <td class="stadiumContent">No of Matches</td>
+                <td class="stadiumContent">Capacity</td>
+
+            </tr>
+            <%  for(let i=0;i<stadium.length;i++){%>
+            <tr class="stadiumContent">
+                <td class="stadiumContent"><%= stadium[i].stadium_name %></td>
+                <td class="stadiumContent"><%= stadium[i].country_name %></td>
+                <td class="stadiumContent"><%= stadium[i].no_of_matches %></td>
+                <td class="stadiumContent"><%= stadium[i].capacity %></td>
+            </tr>
+        </div>
+        <%}%>
+    </table>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$("#playerButton").click( (e)=>{ 
+    $(".playersContent").toggleClass("visible");
+});
+
+$("#teamButton").click( (e)=>{ 
+    $(".teamContent").toggleClass("visible");
+});
+
+$("#wk").click( (e)=>{ 
+    $(".wkContent").toggleClass("visible");
+});
+
+$("#captainButton").click( (e)=>{ 
+    $(".captainContent").toggleClass("visible");
+});
+
+$("#umpireButton").click( (e)=>{ 
+    $(".umpireContent").toggleClass("visible");
+});
+
+$("#stadiumButton").click( (e)=>{ 
+    $(".stadiumContent").toggleClass("visible");
+});
+</script>
