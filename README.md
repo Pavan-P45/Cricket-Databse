@@ -1,106 +1,72 @@
-Cricket Database Web Application
+# Cricket Database Web Application
 
-A web application built with Node.js, Express, and SQLite to manage and display cricket-related data.
+A web application built with **Node.js, Express, EJS, and SQLite** to manage and display cricket-related data.
 
-The application stores and allows viewing/filtering of information about cricketers, teams, captains, coaches, stadiums, wicket-keepers, and umpires.
+The application provides information about **players, teams, wicket-keepers, captains, umpires, coaches, and stadiums**. Users can browse the available data and filter information using the search functionality.
 
-Features
+## 📸 Application Screenshots
 
-View all players, captains, teams, coaches, stadiums, umpires, and wicket-keepers.
+### 🔐 Login Page
 
-Filter information by player name, team, captain, coach, stadium, wicket-keeper, or umpire.
+The application starts with a login page before accessing the cricket database.
 
-Data is stored in a SQLite database (final.db).
+![Login Page](screenshots/login.png)
 
-Dynamic frontend rendered with EJS templates.
+### 🏏 Players
 
-Prerequisites
+The Players section displays detailed information about cricketers, including matches, runs, wickets, batting type, strike rate, and other statistics.
 
-Node.js
- (v14 or above)
+![Players](screenshots/players.png)
 
-npm (comes with Node.js)
+### 🏆 Teams
 
-SQLite3
+The Teams section displays team information including team ID, rank, team name, and country name.
 
-Installation
+![Teams](screenshots/teams.png)
 
-Clone the repository
+### 👨‍🏫 Coach and Stadium
 
-git clone https://github.com/Paplesh107/Movie-Application-App.git
-cd Movie-Application-App
+The application provides information about coaches and stadiums, including stadium name, country, number of matches, and capacity.
 
+![Coach and Stadium](screenshots/coach-stadium.png)
 
-Install dependencies
+### 🔍 Player Search
 
-npm install
+Users can search for a specific player and view the matching cricket statistics.
 
+![Player Search](screenshots/player-search.png)
 
-Ensure the SQLite database exists
+## ✨ Features
 
-The database file final.db should be in the project root and include the following tables:
+- View all players
+- View teams
+- View wicket-keepers
+- View captains
+- View umpires
+- View coaches
+- View stadiums
+- Search and filter cricket information
+- Search players by name
+- Search information by team
+- Display player statistics
+- Display team rankings
+- Display stadium information
+- Dynamic pages using EJS templates
+- Store data using SQLite database
 
-captain
+## 🛠️ Technologies Used
 
-player
+- Node.js
+- Express.js
+- EJS
+- SQLite3
+- HTML
+- CSS
+- JavaScript
 
-team
+## 📂 Database
 
-wicket_keeper
+The application uses a SQLite database named:
 
-stadium
-
-coach
-
-umpire
-
-You can create the database manually or use a SQL script (not included here).
-
-Running the Application
-
-Start the server
-
-node app.js
-
-
-Access the application
-
-The app will automatically open in your default browser at http://localhost:3000
-.
-
-From the homepage, you can browse and filter cricket data.
-
-Project Structure
-Cricket-Database-App/
-├─ public/                 # Static files (CSS, JS, images)
-├─ views/                  # EJS templates
-│  ├─ index.ejs
-│  └─ homepage.ejs
-├─ final.db                # SQLite database
-├─ app.js                  # Main server file
-├─ package.json
-└─ README.md
-
-Dependencies
-
-express – Web framework for Node.js
-
-body-parser – Parse incoming request bodies
-
-sqlite3 – SQLite database driver
-
-ejs – Templating engine for dynamic HTML
-
-open – Open URL in default browser
-
-Install all dependencies with:
-
-npm install
-
-Notes
-
-The server runs on port 3000 by default. You can change it in app.js if needed.
-
-All data interactions happen via POST requests to filter and display cricket information.
-
-Ensure your database contains valid data in all tables for the app to function correctly.
+```text
+final.db
